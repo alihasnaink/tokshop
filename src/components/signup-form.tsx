@@ -1,10 +1,16 @@
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
-export function LoginForm({
+export function SignupForm({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<"div">) {
@@ -12,9 +18,9 @@ export function LoginForm({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader>
-          <CardTitle className="text-2xl">Login</CardTitle>
+          <CardTitle className="text-2xl">Sign Up</CardTitle>
           <CardDescription>
-            Enter your email below to login to your account
+            Enter your email below to create a new account
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -25,7 +31,7 @@ export function LoginForm({
                 <Input
                   id="email"
                   type="email"
-                  placeholder="ali@index.com"
+                  placeholder="ahad@index.com"
                   required
                 />
               </div>
@@ -42,7 +48,7 @@ export function LoginForm({
                 <Input id="password" type="password" required />
               </div>
               <Button type="submit" className="w-full">
-                Login
+                Sign Up
               </Button>
             </div>
           </form>
